@@ -7,9 +7,44 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 
+![ai-stability hero](assets/hero.svg)
+
 `ai-stability` is a CLI-first LLM stability analyzer for developers who want to measure output consistency, detect prompt variance, and inspect unstable model behavior locally.
 
 It runs the same prompt multiple times against the same model, compares the responses, computes a simple stability score, and saves a local JSON artifact for replay and debugging.
+
+## TL;DR
+
+- install: `pipx install ai-stability`
+- run: `ai-stability run prompt.txt --n 5 --provider openai --model gpt-4.1-mini`
+- get: repeated outputs, similarity scores, a stability label, inline diffs, and a saved JSON artifact
+
+## Who It Is For
+
+- prompt engineers testing reliability
+- AI application developers debugging flaky model behavior
+- teams comparing model changes before shipping
+- developers who want a local CLI, not a hosted eval platform
+
+## What It Looks Like
+
+Example prompt file:
+
+```text
+Explain why deterministic prompts can still produce non-deterministic LLM outputs in exactly three sentences.
+```
+
+Example output:
+
+```text
+Summary
+- Average similarity: 82.64%
+- Stability score: 83/100
+- Stability label: High stability
+
+Diff
+[- hidden system behavior -] [+ internal state shifts +]
+```
 
 ## Why It Exists
 
@@ -70,14 +105,6 @@ $env:OPENAI_API_KEY="your_api_key"
 You can copy `.env.example` for reference, but the CLI reads the key from the environment.
 
 ## Quick Start
-
-Create a prompt file:
-
-Example `prompt.txt`:
-
-```text
-Explain the tradeoffs between unit tests and integration tests in five bullet points.
-```
 
 Run the analyzer:
 
@@ -183,6 +210,7 @@ tests/
 
 - [Changelog](CHANGELOG.md)
 - [Contributing guide](CONTRIBUTING.md)
+- [Launch kit](docs/launch-kit.md)
 - [Releases](https://github.com/BuildWithAbid/ai-stability/releases)
 - [PyPI package](https://pypi.org/project/ai-stability/)
 

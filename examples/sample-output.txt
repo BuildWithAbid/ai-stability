@@ -1,0 +1,18 @@
+----------------------------------- Summary -----------------------------------
+Prompt              examples/prompt.txt
+Provider            openai
+Model               gpt-4.1-mini
+Runs                3
+Average similarity  82.64%
+Stability score     83/100
+Stability label     High stability
+Saved JSON          results/ai-stability-20260406-120422.json
+
+Pairwise Similarity
+- Run 1 vs Run 2: 77.60%
+- Run 1 vs Run 3: 96.41%
+- Run 2 vs Run 3: 73.91%
+
+Variation Diff
+Reference Run 1 vs Run 2:
+LLM outputs can vary because sampling and [- hidden system behavior -] [+ internal state shifts +]

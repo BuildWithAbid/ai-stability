@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">ai-stability</title>
+  <desc id="desc">CLI-first LLM stability analyzer hero image.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+      .sans { font-family: Inter, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1040" cy="120" r="180" fill="#0ea5e9" opacity="0.10"/>
+  <circle cx="180" cy="560" r="220" fill="#22c55e" opacity="0.08"/>
+
+  <rect x="64" y="64" width="560" height="512" rx="28" fill="#020617" opacity="0.72" filter="url(#shadow)"/>
+  <rect x="676" y="96" width="540" height="448" rx="28" fill="#0b1220" opacity="0.88" filter="url(#shadow)"/>
+
+  <text x="104" y="138" class="sans" font-size="22" font-weight="700" fill="#38bdf8">ai-stability</text>
+  <text x="104" y="206" class="sans" font-size="54" font-weight="800" fill="#f8fafc">Measure how stable</text>
+  <text x="104" y="266" class="sans" font-size="54" font-weight="800" fill="#f8fafc">your LLM really is</text>
+  <text x="104" y="330" class="sans" font-size="28" fill="#cbd5e1">Run the same prompt multiple times.</text>
+  <text x="104" y="370" class="sans" font-size="28" fill="#cbd5e1">Score variance. Inspect diffs. Save JSON.</text>
+
+  <rect x="104" y="420" width="414" height="68" rx="16" fill="#111827" stroke="#1f2937"/>
+  <text x="132" y="462" class="mono" font-size="24" fill="#e2e8f0">pipx install ai-stability</text>
+
+  <rect x="104" y="510" width="162" height="18" rx="9" fill="#1f2937"/>
+  <rect x="104" y="510" width="124" height="18" rx="9" fill="url(#accent)"/>
+  <text x="286" y="525" class="sans" font-size="18" fill="#94a3b8">Stability score: 83 / 100</text>
+
+  <text x="716" y="148" class="mono" font-size="22" fill="#93c5fd">$ ai-stability run prompt.txt --n 5</text>
+  <text x="716" y="180" class="mono" font-size="22" fill="#93c5fd">  --provider openai --model gpt-4.1-mini</text>
+
+  <rect x="716" y="220" width="460" height="64" rx="16" fill="#111827" stroke="#1f2937"/>
+  <text x="742" y="248" class="sans" font-size="18" font-weight="700" fill="#f8fafc">Summary</text>
+  <text x="742" y="274" class="mono" font-size="18" fill="#cbd5e1">Average similarity: 82.64%</text>
+
+  <rect x="716" y="308" width="220" height="152" rx="16" fill="#111827" stroke="#1f2937"/>
+  <text x="738" y="336" class="sans" font-size="18" font-weight="700" fill="#f8fafc">Run 1</text>
+  <text x="738" y="366" class="mono" font-size="16" fill="#cbd5e1">LLM outputs can vary</text>
+  <text x="738" y="392" class="mono" font-size="16" fill="#cbd5e1">because sampling and</text>
+  <text x="738" y="418" class="mono" font-size="16" fill="#cbd5e1">hidden system behavior</text>
+
+  <rect x="956" y="308" width="220" height="152" rx="16" fill="#111827" stroke="#1f2937"/>
+  <text x="978" y="336" class="sans" font-size="18" font-weight="700" fill="#f8fafc">Run 2</text>
+  <text x="978" y="366" class="mono" font-size="16" fill="#cbd5e1">LLM outputs can vary</text>
+  <text x="978" y="392" class="mono" font-size="16" fill="#cbd5e1">because sampling and</text>
+  <text x="978" y="418" class="mono" font-size="16" fill="#cbd5e1">internal state shifts</text>
+
+  <rect x="716" y="484" width="460" height="36" rx="10" fill="#111827" stroke="#1f2937"/>
+  <text x="736" y="508" class="mono" font-size="16" fill="#e2e8f0">Diff: [- hidden system behavior -] [+ internal state shifts +]</text>
+</svg>
