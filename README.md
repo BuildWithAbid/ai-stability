@@ -190,8 +190,7 @@ Typical release flow:
 1. update the version in `pyproject.toml` and `src/ai_stability/__init__.py`
 2. commit and push the release commit
 3. create and push a Git tag like `v0.1.1`
-4. let the `publish.yml` workflow run tests, build distributions, and upload them to PyPI automatically
-5. optionally create a GitHub release for changelog and downloadable artifacts
+4. let the `publish.yml` workflow run tests, build distributions, publish to PyPI, and create or update the matching GitHub release automatically
 
 PyPI Trusted Publishing still requires one-time configuration on PyPI for this repository before automated publishing will succeed.
 
