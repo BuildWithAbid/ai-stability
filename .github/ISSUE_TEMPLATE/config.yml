@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project README
+    url: https://github.com/BuildWithAbid/ai-stability#readme
+    about: Start here for install, usage, and release details.
+  - name: Releases
+    url: https://github.com/BuildWithAbid/ai-stability/releases
+    about: Review published versions and release notes.

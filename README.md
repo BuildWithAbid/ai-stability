@@ -2,6 +2,8 @@
 
 [![Tests](https://github.com/buildwithabid/ai-stability/actions/workflows/tests.yml/badge.svg)](https://github.com/buildwithabid/ai-stability/actions/workflows/tests.yml)
 [![PyPI version](https://img.shields.io/pypi/v/ai-stability.svg)](https://pypi.org/project/ai-stability/)
+[![GitHub release](https://img.shields.io/github/v/release/buildwithabid/ai-stability)](https://github.com/BuildWithAbid/ai-stability/releases)
+[![PyPI downloads](https://img.shields.io/pypi/dm/ai-stability)](https://pypi.org/project/ai-stability/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 
@@ -177,19 +179,26 @@ tests/
   test_runner.py
 ```
 
+## Project Docs
+
+- [Changelog](CHANGELOG.md)
+- [Contributing guide](CONTRIBUTING.md)
+- [Releases](https://github.com/BuildWithAbid/ai-stability/releases)
+- [PyPI package](https://pypi.org/project/ai-stability/)
+
 ## Release Process
 
 `ai-stability` is published on PyPI:
 
 - https://pypi.org/project/ai-stability/
 
-Future releases are intended to be published from GitHub Actions with PyPI Trusted Publishing.
+Releases are published from GitHub Actions with PyPI Trusted Publishing.
 
 Typical release flow:
 
 1. update the version in `pyproject.toml` and `src/ai_stability/__init__.py`
 2. commit and push the release commit
-3. create and push a Git tag like `v0.1.1`
+3. create and push a Git tag like `vX.Y.Z`
 4. let the `publish.yml` workflow run tests, build distributions, publish to PyPI, and create or update the matching GitHub release automatically
 
 PyPI Trusted Publishing still requires one-time configuration on PyPI for this repository before automated publishing will succeed.
@@ -197,8 +206,8 @@ PyPI Trusted Publishing still requires one-time configuration on PyPI for this r
 Example:
 
 ```bash
-git tag v0.1.1
-git push origin v0.1.1
+git tag vX.Y.Z
+git push origin vX.Y.Z
 ```
 
 ## Files to Review First

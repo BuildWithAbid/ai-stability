@@ -1,0 +1,65 @@
+name: Bug report
+description: Report a reproducible problem with ai-stability
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Include enough detail to reproduce the issue locally.
+
+  - type: input
+    id: command
+    attributes:
+      label: CLI command
+      description: Exact command that triggered the issue
+      placeholder: ai-stability run prompt.txt --n 5 --provider openai --model gpt-4.1-mini
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: ai-stability version
+      placeholder: 0.1.2
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Python and OS
+      placeholder: Python 3.12 on Windows 11
+    validations:
+      required: true
+
+  - type: input
+    id: provider
+    attributes:
+      label: Provider and model
+      placeholder: openai / gpt-4.1-mini
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Minimal prompt sample
+      description: Redact secrets, but include the smallest prompt that still reproduces the problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior or error output
+    validations:
+      required: true
