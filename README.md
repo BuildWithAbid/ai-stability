@@ -1,6 +1,7 @@
 # ai-stability
 
 [![Tests](https://github.com/buildwithabid/ai-stability/actions/workflows/tests.yml/badge.svg)](https://github.com/buildwithabid/ai-stability/actions/workflows/tests.yml)
+[![PyPI version](https://img.shields.io/pypi/v/ai-stability.svg)](https://pypi.org/project/ai-stability/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 
@@ -41,6 +42,14 @@ LLM outputs often vary even when the prompt, model, and calling code stay the sa
 - An OpenAI API key in `OPENAI_API_KEY`
 
 ## Install
+
+### Recommended for end users
+
+```bash
+pipx install ai-stability
+```
+
+### For development
 
 ```bash
 python -m venv .venv
@@ -167,6 +176,24 @@ tests/
   test_scoring.py
   test_runner.py
 ```
+
+## Release Process
+
+`ai-stability` is published on PyPI:
+
+- https://pypi.org/project/ai-stability/
+
+Future releases are intended to be published from GitHub Actions with PyPI Trusted Publishing.
+
+Typical release flow:
+
+1. update the version in `pyproject.toml` and `src/ai_stability/__init__.py`
+2. commit and push the release commit
+3. create a Git tag like `v0.1.1`
+4. publish a GitHub release from that tag
+5. let the `publish.yml` workflow build and upload the distributions to PyPI
+
+PyPI Trusted Publishing still requires one-time configuration on PyPI for this repository before automated publishing will succeed.
 
 ## Files to Review First
 

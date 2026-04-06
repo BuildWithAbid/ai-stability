@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ai-stability"
-version = "0.1.0"
+version = "0.1.1"
 description = "CLI-first LLM stability analyzer for measuring output consistency across repeated prompt runs."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -53,6 +53,7 @@ ai-stability = "ai_stability.cli:app"
 Homepage = "https://github.com/buildwithabid/ai-stability"
 Repository = "https://github.com/buildwithabid/ai-stability"
 Issues = "https://github.com/buildwithabid/ai-stability/issues"
+Changelog = "https://github.com/buildwithabid/ai-stability/releases"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
